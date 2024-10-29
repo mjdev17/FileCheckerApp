@@ -1,0 +1,103 @@
+﻿<Window x:Class="FileCheckerApp.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileCheckerApp.Views"
+        mc:Ignorable="d"
+        Title="About" Height="400" Width="600" MaxHeight="400" MaxWidth="600"
+        
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid Background="Gray">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Width="100" Height="100" 
+                   Source="/Resources/Images/icon.ico" />
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"
+                        Orientation="Vertical">
+
+                <TextBlock Text="FileChecker"
+                           Foreground="White"
+                           FontSize="32"
+                           FontWeight="Bold"/>
+                <TextBlock Text="v0.1.0 (64 bit)"
+                           Foreground="White"
+                           FontSize="14"
+                           FontWeight="Light"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center">
+
+                <TextBlock Text="FileCheckerApp is a free comparison tool, created to make it easier to scan and compare similar files, common files and additional files in two directories."
+                           Foreground="White"
+                           FontSize="14" TextWrapping="Wrap" Height="55" Width="420"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                <TextBlock Text="Author: "
+                           Foreground="White"
+                           FontSize="14"
+                           FontWeight="Bold"/>
+                <TextBlock Foreground="White"
+                           FontSize="14">
+                    <Hyperlink NavigateUri="https://github.com/mjdev17/"
+                               RequestNavigate="AuthorProfile_HyperlinkNavigate">
+                        mjdev17
+                    </Hyperlink>
+                </TextBlock>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="3"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                <TextBlock FontSize="14">
+                    <Hyperlink NavigateUri="https://github.com/mjdev17/FileCheckerApp"
+                               RequestNavigate="GithubRepo_HyperlinkNavigate">
+                        GitHub
+                    </Hyperlink>
+                </TextBlock>
+
+            </StackPanel>
+
+        </Grid>
+
+
+    </Grid>
+    
+</Window>
