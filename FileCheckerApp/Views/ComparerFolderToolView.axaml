@@ -1,0 +1,142 @@
+<UserControl x:Class="FileCheckerApp.ComparerFolderToolView" 
+			 xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:vm="using:FileCheckerApp.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+			 d:DesignWidth="800" d:DesignHeight="450"
+			 x:DataType="vm:FoldersAnalyzerViewModel">
+
+	<Design.DataContext>
+		<vm:FoldersAnalyzerViewModel/>
+	</Design.DataContext>
+
+	<Grid>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="25"/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+					Spacing="10">
+
+			<StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 0 0 0">
+				
+				<TextBlock x:Name="txt_dir1" Text="{Binding SelectedDirectory1, Mode=OneWay}"
+						   Width="220" Padding="5"
+						   Background="DarkGray"/>
+				<Button Content="Select" Command="{Binding SelectDir1Command}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 0 0 0">
+				
+				<TextBlock x:Name="txt_dir2" Text="{Binding SelectedDirectory2, Mode=OneWay}"
+						   Width="220" Padding="5"
+						   Background="DarkGray"/>
+				<Button Content="Select" Command="{Binding SelectDir2Command}" />
+			</StackPanel>
+
+		</StackPanel>
+		
+		<StackPanel Grid.Row="1"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Margin="10"
+					Orientation="Horizontal">
+			
+		</StackPanel>
+
+		<Button Grid.Row="2"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Analyze" Command="{Binding AnalyzeCommand}"/>
+
+		<StackPanel Grid.Row="3"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0 0 15 0"
+                    Height="25">
+			
+		</StackPanel>
+
+		<ScrollViewer Grid.Row="4"
+                      Margin="15,15,15,15">
+
+			<TextBox x:Name="txt_Results"
+                     Text="{Binding Results}"
+                     TextWrapping="WrapWithOverflow"
+                     IsReadOnly="True"
+                     FontSize="14"
+                     Background="Transparent"
+                     BorderThickness="1"
+                     AcceptsReturn="True"
+                     Padding="10"/>
+
+		</ScrollViewer>
+
+		<Grid Grid.Row="5">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="15"/>
+			</Grid.ColumnDefinitions>
+
+			<StackPanel Grid.Column="0"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+				<Label Content="Files Analyzed:"/>
+
+				<TextBlock VerticalAlignment="Center"
+                           Text="{Binding TotalFiles}"/>
+			</StackPanel>
+
+			<StackPanel Grid.Column="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+				<Label Content="Common Files:"/>
+
+				<TextBlock VerticalAlignment="Center"
+                           Text="{Binding CommonFiles}"/>
+			</StackPanel>
+
+			<StackPanel Grid.Column="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+				<Label Content="Aditional Files:"/>
+
+				<TextBlock VerticalAlignment="Center"
+                           Text="{Binding AdditionalFiles}"/>
+
+			</StackPanel>
+
+		</Grid>
+
+	</Grid>
+
+</UserControl>

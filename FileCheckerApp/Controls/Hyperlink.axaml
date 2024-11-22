@@ -1,0 +1,15 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:controls="clr-namespace:FileCheckerApp.Controls;assembly=FileCheckerApp"
+             x:Class="FileCheckerApp.Controls.Hyperlink"
+			 x:DataType="controls:Hyperlink">
+
+	<TextBlock Text="{Binding Text}"
+		       Foreground="Blue"
+               TextDecorations="Underline"
+               Cursor="Hand"
+               PointerPressed="OnLinkClicked"/>
+
+</UserControl>

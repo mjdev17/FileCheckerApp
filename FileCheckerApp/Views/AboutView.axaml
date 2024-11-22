@@ -1,0 +1,95 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:controls="clr-namespace:FileCheckerApp.Controls"
+        mc:Ignorable="d" 
+		d:DesignWidth="600" d:DesignHeight="450"
+		Width="450" Height="450"
+		MaxWidth="600" MaxHeight="450"
+		MinWidth="600" MinHeight="450"
+		WindowStartupLocation="CenterScreen"
+        x:Class="FileCheckerApp.AboutView"
+		Icon="/Assets/Images/icon.ico"
+        Title="About">
+
+	<Grid Background="Gray">
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="150"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Grid>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="250"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Image Width="100" Height="100"
+                   Source="/Assets/Images/icon.ico" />
+
+		</Grid>
+
+		<Grid Grid.Row="0" Grid.Column="1">
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="60"/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition Height="30"/>
+			</Grid.RowDefinitions>
+
+			<StackPanel Grid.Row="0"
+                        Orientation="Vertical">
+
+				<TextBlock Text="FileChecker"
+                           Foreground="White"
+                           FontSize="32"
+                           FontWeight="Bold"/>
+				<TextBlock Text="v0.2.0"
+                           Foreground="White"
+                           FontSize="14"
+                           FontWeight="Light"/>
+
+			</StackPanel>
+
+			<StackPanel Grid.Row="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center">
+
+				<TextBlock Text="FileCheckerApp is a free comparison tool, created to facilitate quick scanning and comparison of files and folders."
+                           Foreground="White"
+                           FontSize="14" TextWrapping="Wrap" Height="55" Width="420"/>
+
+			</StackPanel>
+
+			<StackPanel Grid.Row="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+				<TextBlock Text="Author: "
+                           Foreground="White"
+                           FontSize="14"
+                           FontWeight="Bold"/>
+				<controls:Hyperlink Text="mjdev17" Url="https://github.com/mjdev17"/>
+
+			</StackPanel>
+
+			<StackPanel Grid.Row="3"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+				<controls:Hyperlink Text="Github repo" Url="https://github.com/mjdev17/FileCheckerApp"/>
+
+			</StackPanel>
+
+		</Grid>
+
+	</Grid>
+
+</Window>
