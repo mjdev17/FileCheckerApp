@@ -2,11 +2,11 @@
 
 ## 1. FileCheckerApp - GPLv3 License
 
-This project is licensed under the **GNU General Public License v3.0** or later. You can view the license in the README or by clicking here: [MyApp License](/public/LICENSES/LICENSE.txt)
+This project is licensed under the **GNU General Public License v3.0** or later. You can view the license in the README or by clicking here: [FileCheckerApp License](/public/LICENSES/LICENSE.txt)
 
 ### Icon License
 
-The icon for MyApp is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license.
+The icon for FileCheckerApp is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
 ---
 
