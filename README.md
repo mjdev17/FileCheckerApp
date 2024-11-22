@@ -1,7 +1,5 @@
-<p align="left">
-  <img src="./FileCheckerApp/Assets/Images/icon.ico" width="180" height="180" alt="fileCheckerApp_icon" style="vertical-align: middle;">
-  <span style="font-size: 2em; font-weight: bold; color: #bcbcbc;">FileCheckerApp</span>
-</p>
+# <img src="./FileCheckerApp/Assets/Images/icon.ico" width="180" height="180" alt="fileCheckerApp_icon" style="vertical-align: middle;"> FileCheckerApp
+
 <p align="left" style="font-size: 1.2em; color: #bcbcbc;">📂 Quick and simple file comparison.</p>
 
 FileCheckerApp is a **free tool** designed to simplify comparing and analyzing files and directories. By using the first file or folder you provide as a reference, it contrasts it with a second, helping you identify similarities, missing files, or additional items.
@@ -24,7 +22,7 @@ You can download the latest version for Windows, as well as Linux and macOS here
 > **Currently, the software versions are not signed or certified.**</br>
 > If you are using Windows, you might need to bypass SmartScreen or add an exception when running the application for the first time.
 
-> [**!NOTA**]
+> [**!NOTE**]
 > The Linux and macOS versions are not 100% tested. If you find any bugs, please share them on the Issues page.
 
 |                                | Platform                   | Latest version                       |
